@@ -14,3 +14,6 @@ mongodump --db dbname
 mongodump --db test --collection os --out /tmp/onlyos_collection
 
 # Now lets look restore process
+# in this example we are restoring backup into other VM-... So lets copy copy the backup file and then restore.
+# restore command-
+mongorestore backupfilename
