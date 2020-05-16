@@ -10,5 +10,7 @@ mongodump --out /tmp/fulldump
 # You can also take specific DB-
 mongodump --db dbname
 
-# You can also take specifc DB and specific collection dump-
+# You can also take specifc DB and specific collection dump--
 mongodump --db test --collection os --out /tmp/onlyos_collection
+
+# Now lets look restore process
