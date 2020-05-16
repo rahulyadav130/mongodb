@@ -69,3 +69,20 @@ db.os.find({"released":"2000"}).pretty()
 # Query (print the collection with ignore "_id")
 db.os.find({},{"_id":0}).pretty()
 
+# query for print specific column (by using :1 for true and 0 for false)
+> db.os.find({}, {"_id":0}).pretty()
+{
+	"Windows" : "Widnows 2016",
+	"linux" : "Centos",
+	"macos" : "OSx",
+	"released" : "2000"
+}
+{ "mobileos" : "IOS", "macos" : "OSX", "released" : "2008" }
+> db.os.find({}, {"_id":0,"Windows":1,"linux":1}).pretty()
+{ "Windows" : "Widnows 2016", "linux" : "Centos" }
+
+# print count all records
+db.os.count()
+
+# print count status of collection
+db.os.stats()
