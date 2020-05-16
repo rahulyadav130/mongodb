@@ -1,7 +1,7 @@
 # There is many way to take mongo db dump, so lets look backup process---
 
 # mongodb Backup and restore
-# mondo DB full backup
+# mongo DB full backup
 mongodump 
 # mongodump takes all db full dump
 
