@@ -48,3 +48,15 @@ db.os.find().pretty()
 	"linux" : "Centos",
 	"macos" : "OSx",
 	"monbilekaos" : "Android"
+#############################################################
+# Update or delete records from exising collectoin (We are deleting a key-pair"monbilekaos":"Android" from db.os)
+db.os.update({"Windows":"Widnows 2016"},{$unset: {"monbilekaos":"Android"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+# with reference above command we can verify a key-pair"monbilekaos":"Android" has been deleted from db.os)
+
+
+
+
+
+
