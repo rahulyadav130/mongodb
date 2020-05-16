@@ -20,3 +20,6 @@ show users
 # To enable mongodb authentication works, need to enable security in conf file-
 open the file /etc/mongod.conf and change configuratoin as  security: enabled
 and then restart the services.
+
+# Access mongodb with user name and password -
+mondo --host localhost -uadmin -padmin123 
