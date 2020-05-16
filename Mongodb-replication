@@ -1,0 +1,33 @@
+To enable mongodb replication follow the below steps-
+1. Install mongodb on three VM or container
+2. edit the configuration file
+    /etc/mongod.conf
+    replication:
+       replSetName: "rs0"
+ save and close the file, and restart mongod service
+ 
+ 3. repeate step 2 in other 2 vms as well.
+ 4. login on any machine which you want to act as primary and enter the below command-
+      # access mongo shell "mongo"    
+        rs.initiate()
+        ## above command will initialize replica set and then you can add other 2 machine as secondary-
+        rs.add("secondarydb.example.com:27017")
+        You can then add in the third server which will be the Arbitrator. Note to make this an Arbitrator you need to specify truewhen you add it to the set.
+        rs.addArb("secondarydb1.example.com:27017")
+        
+        
+     Done!!!!!
+5. you can verify the replication config-
+rs.config()
+6. you can also check the replication status
+rs.status()
+6. You can create a collection to verify replication work not --- create a collection
+db.hello.insert({ "name":"Iam" })
+7. go to other seconadry db vm and access mongo shell and enter below coomand
+    rs.slaveOk()
+   show collections
+   # will print available collection
+   
+     
+
+ 
