@@ -14,3 +14,9 @@ db.createUser(
  }
 )
 
+# Once Userd add, can verify by using below command, it will print all available users for db
+show users
+
+# To enable mongodb authentication works, need to enable security in conf file-
+open the file /etc/mongod.conf and change configuratoin as  security: enabled
+and then restart the services.
