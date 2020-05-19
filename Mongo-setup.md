@@ -1,7 +1,7 @@
 1. Create a yum repo- /etc/yum.repos.d/mongo.repo
 
 [mongodb-org-4.2]
-name=MongoDB Repository
+name=MongoDB Repository\
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/ \
 gpgcheck=1 \
 enabled=1 \
