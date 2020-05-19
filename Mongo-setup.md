@@ -7,6 +7,9 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 
+#install mongodb command-
+yum install -y mongodb-org
+
 2. { systemctl start mongod; systemctl enable mongod; systemctl status mongod; }
 3. mongo # command access mongodb shell access
 
